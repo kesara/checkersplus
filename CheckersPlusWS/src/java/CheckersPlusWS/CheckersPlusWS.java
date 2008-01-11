@@ -36,19 +36,28 @@ import javax.jws.WebService;
 public class CheckersPlusWS {
     private final int MAX_PLAYERS = 100;
     private Player[] playersPool;
+    private Player[] readyPool;
     
     /**
      * Web service registerPlayer
      */
     @WebMethod
-    public boolean registerPlayer(@WebParam(name = "playerName") String playerName) {
+    public int registerPlayer(@WebParam(name = "playerName") String playerName) {
         if (playersPool.length < MAX_PLAYERS) {
             playersPool[playersPool.length] = new Player(playerName);
-            return true;
+            return playersPool[playersPool.length -1].getPlayerID();
         }
         else {
-            return false;
+            return -1;
         }
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod
+    public void playerReady(@WebParam(name = "playerID") int playerID) {
+        // TODO implement operation
     }
     
 }

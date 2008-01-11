@@ -21,19 +21,28 @@
 
 package CheckersPlusWS;
 
+import java.util.Random;
+
 /**
  *
  * @author Kesara Nanayakkara Rathnayake
  */
 public class Player {
     private String name;
+    private int id;
+    private final int MAX = 1000;
     
     /** Creates a new instance of Player */
     public Player(String name) {
         this.name = name;
+        id = new Random().nextInt(MAX);
     }
     
     public String getPlayerName() {
         return name;
+    }
+    
+    public int getPlayerID() {
+        return id;
     }
 }
