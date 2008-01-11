@@ -211,6 +211,19 @@ is divided into following sections:
     <target name="-deps-module-jar" depends="init" if="no.dist.ear.dir" unless="no.deps"/>
     <target name="-deps-ear-jar" depends="init" if="dist.ear.dir" unless="no.deps"/>
     <target name="deps-jar" depends="init, -deps-module-jar, -deps-ear-jar"/>
+    <target name="wsgen-init" depends="init">
+        <mkdir dir="${build.generated.dir}/wsgen/service"/>
+        <mkdir dir="${classes.dir}"/>
+        <taskdef name="wsgen" classname="com.sun.tools.ws.ant.WsGen">
+            <classpath path="${j2ee.platform.wsgen.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsgen-CheckersPlusWS" depends="wsgen-init, compile">
+        <wsgen sourcedestdir="${build.generated.dir}/wsgen/service" resourcedestdir="${build.generated.dir}/wsgen/service" keep="false" genwsdl="true" sei="CheckersPlusWS.CheckersPlusWS">
+            <classpath path="${classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
+        </wsgen>
+    </target>
+    <target name="wsgen-generate" depends="wsgen-CheckersPlusWS"/>
     <target name="-pre-pre-compile" depends="init,deps-jar">
         <mkdir dir="${build.classes.dir}"/>
         <mkdir dir="${build.ear.classes.dir}"/>
