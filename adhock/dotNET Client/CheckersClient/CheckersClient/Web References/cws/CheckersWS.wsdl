@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:CheckersWS/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="urn:CheckersWS/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CheckersWS" targetNamespace="urn:CheckersWS/wsdl" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema xmlns:tns="urn:CheckersWS/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:CheckersWS/types">
+      <xsd:complexType name="firstPlayer">
+        <xsd:sequence>
+          <xsd:element name="int_1" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="firstPlayerResponse">
+        <xsd:sequence>
+          <xsd:element name="result" type="xsd:boolean" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="gameEnd">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="gameEndResponse">
+        <xsd:sequence>
+          <xsd:element name="result" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="gameStarted">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="gameStartedResponse">
+        <xsd:sequence>
+          <xsd:element name="result" type="xsd:boolean" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOpornentID">
+        <xsd:sequence>
+          <xsd:element name="int_1" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getOpornentIDResponse">
+        <xsd:sequence>
+          <xsd:element name="result" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getSatus">
+        <xsd:sequence>
+          <xsd:element name="int_1" type="xsd:int" />
+          <xsd:element name="int_2" type="xsd:int" />
+          <xsd:element name="int_3" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="getSatusResponse">
+        <xsd:sequence>
+          <xsd:element name="result" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="movePiece">
+        <xsd:sequence>
+          <xsd:element name="int_1" type="xsd:int" />
+          <xsd:element name="int_2" type="xsd:int" />
+          <xsd:element name="int_3" type="xsd:int" />
+          <xsd:element name="int_4" type="xsd:int" />
+          <xsd:element name="int_5" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="movePieceResponse">
+        <xsd:sequence>
+          <xsd:element name="result" type="xsd:boolean" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="nextMove">
+        <xsd:sequence>
+          <xsd:element name="int_1" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="nextMoveResponse">
+        <xsd:sequence>
+          <xsd:element name="result" type="xsd:boolean" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="registerPlayer">
+        <xsd:sequence>
+          <xsd:element name="int_1" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="registerPlayerResponse">
+        <xsd:sequence>
+          <xsd:element name="result" type="xsd:boolean" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="restartGame">
+        <xsd:sequence />
+      </xsd:complexType>
+      <xsd:complexType name="restartGameResponse">
+        <xsd:sequence>
+          <xsd:element name="result" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="startGame">
+        <xsd:sequence>
+          <xsd:element name="int_1" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="startGameResponse">
+        <xsd:sequence>
+          <xsd:element name="result" type="xsd:boolean" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="firstPlayer" type="tns:firstPlayer" />
+      <xsd:element name="firstPlayerResponse" type="tns:firstPlayerResponse" />
+      <xsd:element name="gameEnd" type="tns:gameEnd" />
+      <xsd:element name="gameEndResponse" type="tns:gameEndResponse" />
+      <xsd:element name="gameStarted" type="tns:gameStarted" />
+      <xsd:element name="gameStartedResponse" type="tns:gameStartedResponse" />
+      <xsd:element name="getOpornentID" type="tns:getOpornentID" />
+      <xsd:element name="getOpornentIDResponse" type="tns:getOpornentIDResponse" />
+      <xsd:element name="getSatus" type="tns:getSatus" />
+      <xsd:element name="getSatusResponse" type="tns:getSatusResponse" />
+      <xsd:element name="movePiece" type="tns:movePiece" />
+      <xsd:element name="movePieceResponse" type="tns:movePieceResponse" />
+      <xsd:element name="nextMove" type="tns:nextMove" />
+      <xsd:element name="nextMoveResponse" type="tns:nextMoveResponse" />
+      <xsd:element name="registerPlayer" type="tns:registerPlayer" />
+      <xsd:element name="registerPlayerResponse" type="tns:registerPlayerResponse" />
+      <xsd:element name="restartGame" type="tns:restartGame" />
+      <xsd:element name="restartGameResponse" type="tns:restartGameResponse" />
+      <xsd:element name="startGame" type="tns:startGame" />
+      <xsd:element name="startGameResponse" type="tns:startGameResponse" />
+    </xsd:schema>
+  </types>
+  <message name="CheckersWSSEI_firstPlayer">
+    <part name="parameters" element="ns2:firstPlayer" />
+  </message>
+  <message name="CheckersWSSEI_firstPlayerResponse">
+    <part name="result" element="ns2:firstPlayerResponse" />
+  </message>
+  <message name="CheckersWSSEI_gameEnd">
+    <part name="parameters" element="ns2:gameEnd" />
+  </message>
+  <message name="CheckersWSSEI_gameEndResponse">
+    <part name="result" element="ns2:gameEndResponse" />
+  </message>
+  <message name="CheckersWSSEI_gameStarted">
+    <part name="parameters" element="ns2:gameStarted" />
+  </message>
+  <message name="CheckersWSSEI_gameStartedResponse">
+    <part name="result" element="ns2:gameStartedResponse" />
+  </message>
+  <message name="CheckersWSSEI_getOpornentID">
+    <part name="parameters" element="ns2:getOpornentID" />
+  </message>
+  <message name="CheckersWSSEI_getOpornentIDResponse">
+    <part name="result" element="ns2:getOpornentIDResponse" />
+  </message>
+  <message name="CheckersWSSEI_getSatus">
+    <part name="parameters" element="ns2:getSatus" />
+  </message>
+  <message name="CheckersWSSEI_getSatusResponse">
+    <part name="result" element="ns2:getSatusResponse" />
+  </message>
+  <message name="CheckersWSSEI_movePiece">
+    <part name="parameters" element="ns2:movePiece" />
+  </message>
+  <message name="CheckersWSSEI_movePieceResponse">
+    <part name="result" element="ns2:movePieceResponse" />
+  </message>
+  <message name="CheckersWSSEI_nextMove">
+    <part name="parameters" element="ns2:nextMove" />
+  </message>
+  <message name="CheckersWSSEI_nextMoveResponse">
+    <part name="result" element="ns2:nextMoveResponse" />
+  </message>
+  <message name="CheckersWSSEI_registerPlayer">
+    <part name="parameters" element="ns2:registerPlayer" />
+  </message>
+  <message name="CheckersWSSEI_registerPlayerResponse">
+    <part name="result" element="ns2:registerPlayerResponse" />
+  </message>
+  <message name="CheckersWSSEI_restartGame">
+    <part name="parameters" element="ns2:restartGame" />
+  </message>
+  <message name="CheckersWSSEI_restartGameResponse">
+    <part name="result" element="ns2:restartGameResponse" />
+  </message>
+  <message name="CheckersWSSEI_startGame">
+    <part name="parameters" element="ns2:startGame" />
+  </message>
+  <message name="CheckersWSSEI_startGameResponse">
+    <part name="result" element="ns2:startGameResponse" />
+  </message>
+  <portType name="CheckersWSSEI">
+    <operation name="firstPlayer">
+      <input message="tns:CheckersWSSEI_firstPlayer" />
+      <output message="tns:CheckersWSSEI_firstPlayerResponse" />
+    </operation>
+    <operation name="gameEnd">
+      <input message="tns:CheckersWSSEI_gameEnd" />
+      <output message="tns:CheckersWSSEI_gameEndResponse" />
+    </operation>
+    <operation name="gameStarted">
+      <input message="tns:CheckersWSSEI_gameStarted" />
+      <output message="tns:CheckersWSSEI_gameStartedResponse" />
+    </operation>
+    <operation name="getOpornentID">
+      <input message="tns:CheckersWSSEI_getOpornentID" />
+      <output message="tns:CheckersWSSEI_getOpornentIDResponse" />
+    </operation>
+    <operation name="getSatus">
+      <input message="tns:CheckersWSSEI_getSatus" />
+      <output message="tns:CheckersWSSEI_getSatusResponse" />
+    </operation>
+    <operation name="movePiece">
+      <input message="tns:CheckersWSSEI_movePiece" />
+      <output message="tns:CheckersWSSEI_movePieceResponse" />
+    </operation>
+    <operation name="nextMove">
+      <input message="tns:CheckersWSSEI_nextMove" />
+      <output message="tns:CheckersWSSEI_nextMoveResponse" />
+    </operation>
+    <operation name="registerPlayer">
+      <input message="tns:CheckersWSSEI_registerPlayer" />
+      <output message="tns:CheckersWSSEI_registerPlayerResponse" />
+    </operation>
+    <operation name="restartGame">
+      <input message="tns:CheckersWSSEI_restartGame" />
+      <output message="tns:CheckersWSSEI_restartGameResponse" />
+    </operation>
+    <operation name="startGame">
+      <input message="tns:CheckersWSSEI_startGame" />
+      <output message="tns:CheckersWSSEI_startGameResponse" />
+    </operation>
+  </portType>
+  <binding name="CheckersWSSEIBinding" type="tns:CheckersWSSEI">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="firstPlayer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="gameEnd">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="gameStarted">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getOpornentID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSatus">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="movePiece">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="nextMove">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="registerPlayer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="restartGame">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="startGame">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CheckersWS">
+    <port name="CheckersWSSEIPort" binding="tns:CheckersWSSEIBinding">
+      <soap:address location="http://spider:8080/CheckersWS/CheckersWS" />
+    </port>
+  </service>
+</definitions>

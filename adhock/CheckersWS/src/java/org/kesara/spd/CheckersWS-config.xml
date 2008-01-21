@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<configuration xmlns='http://java.sun.com/xml/ns/jax-rpc/ri/config'>
+	<service name='CheckersWS' targetNamespace='urn:CheckersWS/wsdl' typeNamespace='urn:CheckersWS/types' packageName='org.kesara.spd'>
+		<interface name='org.kesara.spd.CheckersWSSEI' servantName='org.kesara.spd.CheckersWSImpl'>
+		</interface>
+	</service>
+</configuration>
