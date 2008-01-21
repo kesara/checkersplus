@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?><definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="urn:CheckersWS/wsdl" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="urn:CheckersWS/types" name="CheckersWS" targetNamespace="urn:CheckersWS/wsdl">
+  <types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:CheckersWS/types" xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="urn:CheckersWS/types">
+      <complexType name="firstPlayer">
+        <sequence>
+          <element name="int_1" type="int"/></sequence></complexType>
+      <complexType name="firstPlayerResponse">
+        <sequence>
+          <element name="result" type="boolean"/></sequence></complexType>
+      <complexType name="gameEnd">
+        <sequence/></complexType>
+      <complexType name="gameEndResponse">
+        <sequence>
+          <element name="result" type="int"/></sequence></complexType>
+      <complexType name="gameStarted">
+        <sequence/></complexType>
+      <complexType name="gameStartedResponse">
+        <sequence>
+          <element name="result" type="boolean"/></sequence></complexType>
+      <complexType name="getOpornentID">
+        <sequence>
+          <element name="int_1" type="int"/></sequence></complexType>
+      <complexType name="getOpornentIDResponse">
+        <sequence>
+          <element name="result" type="int"/></sequence></complexType>
+      <complexType name="getSatus">
+        <sequence>
+          <element name="int_1" type="int"/>
+          <element name="int_2" type="int"/>
+          <element name="int_3" type="int"/></sequence></complexType>
+      <complexType name="getSatusResponse">
+        <sequence>
+          <element name="result" type="int"/></sequence></complexType>
+      <complexType name="movePiece">
+        <sequence>
+          <element name="int_1" type="int"/>
+          <element name="int_2" type="int"/>
+          <element name="int_3" type="int"/>
+          <element name="int_4" type="int"/>
+          <element name="int_5" type="int"/></sequence></complexType>
+      <complexType name="movePieceResponse">
+        <sequence>
+          <element name="result" type="boolean"/></sequence></complexType>
+      <complexType name="nextMove">
+        <sequence>
+          <element name="int_1" type="int"/></sequence></complexType>
+      <complexType name="nextMoveResponse">
+        <sequence>
+          <element name="result" type="boolean"/></sequence></complexType>
+      <complexType name="registerPlayer">
+        <sequence>
+          <element name="int_1" type="int"/></sequence></complexType>
+      <complexType name="registerPlayerResponse">
+        <sequence>
+          <element name="result" type="boolean"/></sequence></complexType>
+      <complexType name="restartGame">
+        <sequence/></complexType>
+      <complexType name="restartGameResponse">
+        <sequence>
+          <element name="result" type="int"/></sequence></complexType>
+      <complexType name="startGame">
+        <sequence>
+          <element name="int_1" type="int"/></sequence></complexType>
+      <complexType name="startGameResponse">
+        <sequence>
+          <element name="result" type="boolean"/></sequence></complexType>
+      <element name="firstPlayer" type="tns:firstPlayer"/>
+      <element name="firstPlayerResponse" type="tns:firstPlayerResponse"/>
+      <element name="gameEnd" type="tns:gameEnd"/>
+      <element name="gameEndResponse" type="tns:gameEndResponse"/>
+      <element name="gameStarted" type="tns:gameStarted"/>
+      <element name="gameStartedResponse" type="tns:gameStartedResponse"/>
+      <element name="getOpornentID" type="tns:getOpornentID"/>
+      <element name="getOpornentIDResponse" type="tns:getOpornentIDResponse"/>
+      <element name="getSatus" type="tns:getSatus"/>
+      <element name="getSatusResponse" type="tns:getSatusResponse"/>
+      <element name="movePiece" type="tns:movePiece"/>
+      <element name="movePieceResponse" type="tns:movePieceResponse"/>
+      <element name="nextMove" type="tns:nextMove"/>
+      <element name="nextMoveResponse" type="tns:nextMoveResponse"/>
+      <element name="registerPlayer" type="tns:registerPlayer"/>
+      <element name="registerPlayerResponse" type="tns:registerPlayerResponse"/>
+      <element name="restartGame" type="tns:restartGame"/>
+      <element name="restartGameResponse" type="tns:restartGameResponse"/>
+      <element name="startGame" type="tns:startGame"/>
+      <element name="startGameResponse" type="tns:startGameResponse"/></schema></types>
+  <message name="CheckersWSSEI_firstPlayer">
+    <part name="parameters" element="ns2:firstPlayer"/></message>
+  <message name="CheckersWSSEI_firstPlayerResponse">
+    <part name="result" element="ns2:firstPlayerResponse"/></message>
+  <message name="CheckersWSSEI_gameEnd">
+    <part name="parameters" element="ns2:gameEnd"/></message>
+  <message name="CheckersWSSEI_gameEndResponse">
+    <part name="result" element="ns2:gameEndResponse"/></message>
+  <message name="CheckersWSSEI_gameStarted">
+    <part name="parameters" element="ns2:gameStarted"/></message>
+  <message name="CheckersWSSEI_gameStartedResponse">
+    <part name="result" element="ns2:gameStartedResponse"/></message>
+  <message name="CheckersWSSEI_getOpornentID">
+    <part name="parameters" element="ns2:getOpornentID"/></message>
+  <message name="CheckersWSSEI_getOpornentIDResponse">
+    <part name="result" element="ns2:getOpornentIDResponse"/></message>
+  <message name="CheckersWSSEI_getSatus">
+    <part name="parameters" element="ns2:getSatus"/></message>
+  <message name="CheckersWSSEI_getSatusResponse">
+    <part name="result" element="ns2:getSatusResponse"/></message>
+  <message name="CheckersWSSEI_movePiece">
+    <part name="parameters" element="ns2:movePiece"/></message>
+  <message name="CheckersWSSEI_movePieceResponse">
+    <part name="result" element="ns2:movePieceResponse"/></message>
+  <message name="CheckersWSSEI_nextMove">
+    <part name="parameters" element="ns2:nextMove"/></message>
+  <message name="CheckersWSSEI_nextMoveResponse">
+    <part name="result" element="ns2:nextMoveResponse"/></message>
+  <message name="CheckersWSSEI_registerPlayer">
+    <part name="parameters" element="ns2:registerPlayer"/></message>
+  <message name="CheckersWSSEI_registerPlayerResponse">
+    <part name="result" element="ns2:registerPlayerResponse"/></message>
+  <message name="CheckersWSSEI_restartGame">
+    <part name="parameters" element="ns2:restartGame"/></message>
+  <message name="CheckersWSSEI_restartGameResponse">
+    <part name="result" element="ns2:restartGameResponse"/></message>
+  <message name="CheckersWSSEI_startGame">
+    <part name="parameters" element="ns2:startGame"/></message>
+  <message name="CheckersWSSEI_startGameResponse">
+    <part name="result" element="ns2:startGameResponse"/></message>
+  <portType name="CheckersWSSEI">
+    <operation name="firstPlayer">
+      <input message="tns:CheckersWSSEI_firstPlayer"/>
+      <output message="tns:CheckersWSSEI_firstPlayerResponse"/></operation>
+    <operation name="gameEnd">
+      <input message="tns:CheckersWSSEI_gameEnd"/>
+      <output message="tns:CheckersWSSEI_gameEndResponse"/></operation>
+    <operation name="gameStarted">
+      <input message="tns:CheckersWSSEI_gameStarted"/>
+      <output message="tns:CheckersWSSEI_gameStartedResponse"/></operation>
+    <operation name="getOpornentID">
+      <input message="tns:CheckersWSSEI_getOpornentID"/>
+      <output message="tns:CheckersWSSEI_getOpornentIDResponse"/></operation>
+    <operation name="getSatus">
+      <input message="tns:CheckersWSSEI_getSatus"/>
+      <output message="tns:CheckersWSSEI_getSatusResponse"/></operation>
+    <operation name="movePiece">
+      <input message="tns:CheckersWSSEI_movePiece"/>
+      <output message="tns:CheckersWSSEI_movePieceResponse"/></operation>
+    <operation name="nextMove">
+      <input message="tns:CheckersWSSEI_nextMove"/>
+      <output message="tns:CheckersWSSEI_nextMoveResponse"/></operation>
+    <operation name="registerPlayer">
+      <input message="tns:CheckersWSSEI_registerPlayer"/>
+      <output message="tns:CheckersWSSEI_registerPlayerResponse"/></operation>
+    <operation name="restartGame">
+      <input message="tns:CheckersWSSEI_restartGame"/>
+      <output message="tns:CheckersWSSEI_restartGameResponse"/></operation>
+    <operation name="startGame">
+      <input message="tns:CheckersWSSEI_startGame"/>
+      <output message="tns:CheckersWSSEI_startGameResponse"/></operation></portType>
+  <binding name="CheckersWSSEIBinding" type="tns:CheckersWSSEI">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="firstPlayer">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/></input>
+      <output>
+        <soap:body use="literal"/></output></operation>
+    <operation name="gameEnd">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/></input>
+      <output>
+        <soap:body use="literal"/></output></operation>
+    <operation name="gameStarted">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/></input>
+      <output>
+        <soap:body use="literal"/></output></operation>
+    <operation name="getOpornentID">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/></input>
+      <output>
+        <soap:body use="literal"/></output></operation>
+    <operation name="getSatus">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/></input>
+      <output>
+        <soap:body use="literal"/></output></operation>
+    <operation name="movePiece">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/></input>
+      <output>
+        <soap:body use="literal"/></output></operation>
+    <operation name="nextMove">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/></input>
+      <output>
+        <soap:body use="literal"/></output></operation>
+    <operation name="registerPlayer">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/></input>
+      <output>
+        <soap:body use="literal"/></output></operation>
+    <operation name="restartGame">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/></input>
+      <output>
+        <soap:body use="literal"/></output></operation>
+    <operation name="startGame">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/></input>
+      <output>
+        <soap:body use="literal"/></output></operation></binding>
+  <service name="CheckersWS">
+    <port name="CheckersWSSEIPort" binding="tns:CheckersWSSEIBinding">
+      <soap:address location="http://spider:8080/CheckersWS/CheckersWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"/></port></service></definitions>
