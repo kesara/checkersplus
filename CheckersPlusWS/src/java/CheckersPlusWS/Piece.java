@@ -27,16 +27,35 @@ package CheckersPlusWS;
  */
 public class Piece {
     private Player owner;
+    private int x;
+    private int y;
     private boolean crowned;
     
+    private final int MAX = 16;
+    
     /** Creates a new instance of Piece */
-    public Piece(Player p) {
-        owner = p;
-        crowned = false;
+    public Piece(Player p, int x, int y) {
+        this.owner = p;
+        this.x = x;
+        this.y = y;
+        this.crowned = false;
     }
     
     protected boolean isCrowned() {
         return crowned;
     }
     
+    public boolean move(int p, int q) {
+        if (q == y + 1 && (p == x + 1 || p == x - 1) && p < MAX && y < MAX && p >= 0 && q >= 0) {
+            x = p;
+            y = q;
+            return true;
+        }
+        else if (q == y - 1 && (p == x + 1 || p == x - 1) && p < MAX && y < MAX && p >= 0 && q >= 0 && isCrowned()) {
+            x = p;
+            y = q;
+            return true;
+        }
+        return false;
+    }
 }
