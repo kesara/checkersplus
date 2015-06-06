@@ -1,5 +1,5 @@
-# checkersplus
-Client-server based, platform independent, multi player American Checker (Draughts) game. With J2EE based server, Java Client and a Windows.NET client.
+# Checkers Plus
+Client-server based, platform independent, multi player American Checkers (Draughts) game. With J2EE based server, Java Client and a Windows.NET client.
 
 Old sourceforge URL: https://sourceforge.net/projects/checkersplus/
 
